@@ -1,0 +1,571 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>02805 - Music Analysis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="startbootstrap-grayscale-gh-pages/css/grayscale.min.css" rel="stylesheet">
+
+  <style>
+.carousel-control-prev-icon-black {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+.carousel-control-next-icon-black {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+	 
+	 
+	 .carousel-control-prev-icon-black,
+.carousel-control-next-icon-black {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+	 
+	 .carousel-indicators-black {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+.carousel-indicators-black li {
+  position: relative;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #7f7f7f !important;
+}
+.carousel-indicators-black li::before {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+.carousel-indicators-black li::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+.carousel-indicators-black .active {
+  background-color: #000 !important;
+}
+
+/* Dropdown menu */
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.lead{
+	text-align: justify;
+}
+
+p {
+		text-align: justify;
+}
+
+</style>
+
+
+</head>
+  
+
+  <body id="page-top">
+
+ <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">02805 - Music Analysis</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#video">Introduction</a>
+            </li>     
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About the Project</a>
+            </li>    
+            
+                                     
+            <div class="dropdown">
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="#dropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">The Project</a>
+                    
+                    <div class="dropdown-content " aria-labelledby="dropDown">
+                                        <a class="dropdown-item" href="#data">Where does our data comes from</a>
+                                        <a class="dropdown-item" href="#graphs">Analysis of chords progression</a>
+                                        <a class="dropdown-item" href="#tempo">Analysis of the rhythm</a>
+										<a class="dropdown-item" href="#lyrics">Analysis of lyrics</a>		
+										<a class="dropdown-item" href="#recipe">The Truc Magic Recipe for popular song</a>														
+                    </div>
+                </li>
+            </div>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Downloads</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- Header -->
+  <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">The Recipe For Popular Song</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">Or the day when Taylor Swift fell</h2>
+        </div>
+        
+      </div>
+    </header>
+
+<!-- video proposal -->
+  <section id="video" class="about-section  text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Our project proposal video</h2>
+        	</div>
+        </div>
+        
+       <iframe width="1120" height="700" src="https://www.youtube.com/embed/rfDe-_-8tzA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+<br>
+    </section>
+    
+<!--    about-->
+  <section id="about" class="projects-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About this page</h2>
+            <p class="lead">What if there's a secret recipe ready to produce popular music? That is the question we have asked ourselves here. 
+				
+            
+            <br>
+
+			Through the analysis of the chord successions, rhythm and lyrics of the most popular songs of the last 10 years, we try to find this secret.
+           <br>
+            
+       
+            </p>
+            
+            <h4>What's in here?</h4>
+            <ul>
+			  <li>The visual representation of the network of chords in modern hit songs</li>
+			  <li>Basic statistical information about chord progressions</li>
+			  <li>A visualisation of the most commonly used associations of chords</li>
+			  <li>The 10 most used 4 chords progressions</li>
+			  <li>The distribution of the tempo of popular songs</li>
+			  <li>A comparison of the most commonly used word in modern hit songs and pop songs</li>
+			  <li>Analysis of the sentiment of the lyrics in modern hit songs</li>
+			  <li>The generation of lyrics for an entire song using what we found</li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<!--     Dataset-->
+  <section id="data" class="projects-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+			<h2>Where does our data come from ?</h2>
+			<br>
+              <h3 class="text-secondary"> Billboard Hot 100 Chart </h3>
+              <p class="lead">We have downloaded a list of nearly <strong>4000 hits</strong> that have entered the top 100 on billboard since 2010.</p>
+            
+			  <br>
+			  <br>
+              <h3 class="text-secondary">Rhythm and Lyrics</h3>
+              <p class="lead">For the rhythm analysis, we retrieved the average tempo of each song via the Spotify API.
+				As for the lyrics, we recovered them via Genius and <a href="https://www.kaggle.com/mousehead/songlyrics/data">this study</a>. </p>
+				<br>
+				<br>
+
+				<h3 class="text-secondary">Chords progression</h3>
+				<p class="lead">The Hooktheory API allows to obtain a graph containing the chord progressions of 5000 known songs recorded in the database. </p>
+			
+			</div>
+            
+        </div>
+      </div>
+    </section>
+      
+
+<!--     Network Analysis-->
+  <section id="graphs" class="projects-section bg-light rounded">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Chords progression</h2>
+							<h3 class="text-secondary">Basic statistics</h3>
+            <p>
+				We obtained a directed network of chords progression from 5000 songs. 
+				Each of the <strong>213</strong> nodes correspond to a chord, and each of the <strong>1880</strong> links indicates a succession of chords. 
+          		The edge width is proportionnal to the probability of finding a specific chord knowing the previous chord in a song.
+          		Node sizes are proportionnal to the degree of a chord.
+                 </p>
+			
+				 
+		
+			<img class="img-fluid mb-3 mb-lg-0" src="Pictures/GraphHook.png" alt="">		 
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			<h3 class="text-secondary">The chord that makes my heart vibrate?</h3>
+
+			<p>We plotted the histogram of the chord degree distribution.
+			</p>
+					
+			<img class="img-fluid mb-3 mb-lg-0" src="Pictures/degreeDistribution.png" alt="">		 
+			<br>
+
+			<p>We noticed that many chords had a low degree, which meant that they were often played alone or played infrequently (less than 15 times out of 5000 songs). 
+		On the other hand, a minority of chords are very present, some of them appearing in more than 90 successions of chords in the songs in the database.
+		<br>
+		<br>
+		There are some privileged chords. 
+	
+		Chords with the highest degrees are also those with the highest probability of appearing in a song.</p>
+
+		<img class="img-fluid mb-3 mb-lg-0" src="Pictures/HighestDegrees.png" alt="">	
+		<img class="img-fluid mb-3 mb-lg-0" src="Pictures/HighestProbability.png" alt="">	
+
+		<p>These are the <span style="background-color:	#B0E0E6">chords '1', '4', '6' and '5'</span> which have about 14% chance of appearing in a song.</p>
+        	
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3 class="text-secondary">Which chord is the center of the play?</h3>
+
+		<p>
+			Analysing the centrality could give us a measure of how well a chord is used in current musical progressions.
+			We analysed the centrality using both degree and eigenvector. 
+			 </p>
+
+			 <img class="img-fluid mb-3 mb-lg-0" src="Pictures/Degree_centrality.png" alt="">		 
+
+			 <p>For the degree centrality, the most central chords are of course the chords with the highest degree we displayed before.<br>
+				<br>
+				Using the eigenvector centrality, we found the same most central chords. We displayed them with their centrality:</p>
+			
+			<img class="img-fluid mb-3 mb-lg-0" src="Pictures/HighestEigCent.png" alt="">
+
+				<p>
+					The most central chords found through eigenvector centrality might not have the most connections, but are linked to other influential chords.
+					Here, we find the same central chords for both the degree centrality and eigenvector centrality. 
+					This means that the most represented chords also seem to be all linked together. 
+					So there seems to be a serie of chord progressions that come back often.
+				</p>
+		  
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h3 class="text-secondary">Finding communities</h3>
+			<p class="lead"> We have grouped the chords by communities using Louvain algorithm. We found 5 different communities. </p>
+
+			<img class="img-fluid mb-3 mb-lg-0" src="Pictures/Communities.png" alt="">
+			<br>
+
+			<p>Finding communities shows that some chord associations are more represented than others.
+				However the communities are well related. This means that at some point, they can all meet to form a piece of music.
+			<br> To see the communities more in detail, we traced the subgraph for each of them. </p>	
+			<div style="text-align: center;">
+				<img class="img-fluid mb-3 mb-lg-0" src="Pictures/Communities1.png" alt="">
+				<img class="img-fluid mb-3 mb-lg-0" src="Pictures/Communities2.png" alt="">
+			</div>
+			<br>
+			<br>
+			<p>We can see first that the most common chords (1,4,6,5,2) have been split into different communities. Thus the community detection might simply split the network because less used chords might be more attracted to one of the most common chords.</p>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h3 class="text-secondary">Most common chords</h3>			
+			
+			<p>Finally, we found the most present associations of 4 chords.</p>
+
+			<img class="img-fluid mb-3 mb-lg-0" src="Pictures/MostCommonChordProgressions4.PNG" alt="">
+
+				</br>
+			<p>Not surprisingly, they are composed of chords with the highest degree.
+				See the most present association of 3 chords in our explainer notebook.</p>
+
+
+			
+			</div>
+        </div>
+			</div>
+ 
+
+		
+			
+
+		
+    </section>
+    
+<!-- Rythm Analysis-->
+	<section id="tempo" class="projects-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>The Rhythm</h2>
+						<h3 class="text-secondary"> Beat the Data</h3>
+					<p>We plotted the tempo distribution of each song. </p>
+
+					<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/repartitionTempo.png" alt="">
+					
+					<p>
+						The tempos seems to be normally distributed around two peak values: 95 bpm and 130 bpm. 
+						We can also take a look at the average tempo of our dataset:
+					</p>
+					<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/avg_tempo.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+   
+
+<!-- Lyrics Analysis-->
+	<section id="lyrics" class="projects-section bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>The lyrics</h2>
+
+					<p class="lead">To finish our recipe, we need to find out the most generic lyrics, according to the hit songs of the last decade. To accomplish this, we obtained a 8,7 Mo text file with all the lyrics of the songs gathered on billboard.				</p>
+					<br>
+					<br>
+
+						<h3 class="text-secondary">Wordcloud</h3>
+
+						<p>We determined the most common words in these lyrics (using a TF-IDF calculation), after removing the common english stopwords. We displayed the results as a wordcloud.</p>
+
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/Modern.png" alt="">
+						<br>
+						<br>
+
+						<p>Here is the top 10 list of the most common words in these lyrics:</p>
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/most_common_modern.png" alt="">
+						
+						<br>
+						<p>The most surprising words are “nigga”, “bitch” and “fuck”, which appear to be very common in modern rap and hip hop songs that made their way to the Billboard 100. We expect to see them appear in the generic verses that we will see further in this study.
+							To compare how modern music lyrics are different from older songs, we downloaded a dataset of 57650 pop songs lyrics, and ran the same analysis on them. The following wordcloud was obtained.</p>
+						
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/pop_wordcloud.png" alt="">
+						<br>
+						<br>
+						<p>The top 10 most common words are, this time:</p>
+
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/most_common_pop.png" alt="">
+						<br>
+
+						<p>If we dive deeper in the results of the TF-IDF, it is interesting to highlight words that have a much higher importance in modern hit songs than in other pop songs:
+							<ul>
+								<li>“nigga” is 179th  for pop songs, 2nd for modern hit songs</li>
+								<li>“bitch” is 320th  for pop songs, 3rd for modern hit songs</li>
+								<li>“shit” is 198th  for pop songs, 15th for modern hit songs</li>
+								<li>“money” is 125th  for pop songs, 31st for modern hit songs</li>
+
+							</ul>	
+							<br>
+							And on the other hand:
+							<ul>
+								<li>“heart” is 21st  for pop songs, 57th for modern hit songs</li>
+								<li>“alone” is 83rd  for pop songs, 160th for modern hit songs</li>
+								<li>“lord” is 93rd  for pop songs, 181st for modern hit songs</li>
+								<li>“inside” is 100th  for pop songs, 241st for modern hit songs</li>
+							</ul>
+
+							As a whole, we can guess that modern hit songs are less based on emotions and spirituality as much as they are based on physical attraction, cursing and money.
+						</p>
+
+
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<h2>Sentiment analysis</h2>
+
+						<p>We estimated how happy the modern hit songs are, and compared them to the happiness score of the classic pop songs dataset. We obtained the following:</p>					
+
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/sentiment.png" alt="">
+						<br>
+
+						<p>Modern hit songs are not very different from classic pop songs concerning sentiment, although they appear to be slightly “less happy” on average. We do observe as well that neither of our datasets include “very happy” or “very sad” songs.</p>
+
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<h2>Generate the lyrics</h2>
+
+						<p>To get the most generic lyrics possible, we then extracted the “most generic verses” from the songs. These verses are the ones that contain the most common words on average, and at least 5 words (common stopwords excluded). To finish, we arranged 33 verses out of the 65 most generic ones, in order to create a generic song with rhymes.
+						</p>
+
+						<img class="img-fluid mb-3 mb-lg-0 rounded mx-auto d-block" src="Pictures/lyrics.png" alt="">
+						
+						<br>
+						<p>Interesting fact: After arranging these lyrics, we discovered that 12 of the 33 verses selected come from the same song: <strong>Don’t Start Now</strong>, by Dua Lipa, a song that recently hits the Billboard. Nearly half of the verses of the songs are in the 50 most generic verses, as established by our study. Could Dua Lipa have found about the recipe for popular songs just before us?</p>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+<!-- Recipe-->
+<section id="recipe" class="projects-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h2>Have we found the True Magic Recipe for Popular Music ? </h2>
+					<br>
+					<p>It seems that there is not a single recipe. On the other hand, there are a lot of elements (chords, lexical fields) that come up very regularly in most modern hit songs. <br>
+						Thus, through the various analyses carried out, we were able to determine the three elements that would allow us to produce the most generic song:
+						
+							<li>The following chord progression: <span style="background-color:	#B0E0E6">6 -> 4 -> 1 -> 5</span></li>
+							<li>An average tempo of <span style="background-color:	#B0E0E6">123 bpm</span></li>
+							<li>The lyrics generated above</li>
+						
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+    
+ <!-- download Section -->
+	<section id="download" class="signup-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-lg-8 mx-auto text-center">
+
+					<i class="fa fa-download fa-2x mb-2 text-white"></i>
+					<h2 class="text-white mb-5">Download data sets and Explainer notebook</h2>
+
+							 <a href="http://nbviewer.jupyter.org/github/mrweissguy/games_of_thrones/blob/master/FINAL-HANDIN-GOT12-12-2018.ipynb" class="btn btn-secondary js-scroll-trigger" style="margin-right:10px; margin-bottom:5px">View Explainer Notebook</a>
+							 <a href="https://github.com/TanguyNav/MusicAnalysis/raw/master/Data.zip" class="btn btn-secondary js-scroll-trigger" style="margin-right:10px; margin-bottom:5px">Download Datasets</a>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-black small text-center text-white-50">
+		<div class="container">
+			Copyright © CC cé moa
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="js/grayscale.min.js"></script>
+    
+
+
+  
+
+</body></html>
